@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:orchid/detail_wisata.dart';
 
 class Homepage extends StatelessWidget {
   @override
@@ -70,6 +71,79 @@ class Homepage extends StatelessWidget {
             child: Text(
               'Wisata Orchid',
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ),
+          // Container(
+          //   margin: const EdgeInsets.all(10.0),
+          //   height: 150.0,
+          //   width: 200.0,
+          //   decoration: BoxDecoration(color: Colors.amber),
+          //   child: Text('Text'),
+          // ),
+          // Container(
+          //   margin: const EdgeInsets.all(10.0),
+          //   height: 150.0,
+          //   width: 200.0,
+          //   decoration: BoxDecoration(color: Colors.amber),
+          //   child: Text('Text'),
+          // ),
+          // Container(
+          //   margin: const EdgeInsets.all(10.0),
+          //   height: 150.0,
+          //   width: 200.0,
+          //   decoration: BoxDecoration(color: Colors.amber),
+          //   child: Text('Text'),
+          // ),
+          Container(
+            height: 200.0, //Ganti tinggi section
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(),
+              shrinkWrap: true,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  height: 150.0, //Ganti Ukuran kotak
+                  width: 300.0,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image.asset(
+                    'assets/asset-logo.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            DetailWisata(name: "WC", price: 200),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(10.0),
+                    height: 150.0,
+                    width: 200.0,
+                    decoration: BoxDecoration(color: Colors.amber),
+                    child: Text('Text'),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  height: 150.0,
+                  width: 200.0,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Text('Text'),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  height: 150.0,
+                  width: 200.0,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Text('Text'),
+                ),
+              ],
             ),
           ),
         ],
