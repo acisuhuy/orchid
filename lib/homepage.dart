@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:orchid/detail_wisata.dart';
+// import 'package:orchid/detail_wisata.dart';
 
 class Homepage extends StatelessWidget {
   @override
@@ -73,6 +73,7 @@ class Homepage extends StatelessWidget {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ),
+
           // Container(
           //   margin: const EdgeInsets.all(10.0),
           //   height: 150.0,
@@ -87,13 +88,18 @@ class Homepage extends StatelessWidget {
           //   decoration: BoxDecoration(color: Colors.amber),
           //   child: Text('Text'),
           // ),
+
           // Container(
           //   margin: const EdgeInsets.all(10.0),
           //   height: 150.0,
           //   width: 200.0,
           //   decoration: BoxDecoration(color: Colors.amber),
-          //   child: Text('Text'),
+          //   child: Image.asset(
+          //     'assets/asset5.jpg',
+          //     fit: BoxFit.cover,
+          //   ),
           // ),
+
           Container(
             height: 200.0, //Ganti tinggi section
             child: ListView(
@@ -107,44 +113,69 @@ class Homepage extends StatelessWidget {
                   width: 300.0,
                   decoration: BoxDecoration(color: Colors.amber),
                   child: Image.asset(
-                    'assets/asset-logo.jpg',
+                    'assets/asset4.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            DetailWisata(name: "WC", price: 200),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    height: 150.0,
-                    width: 200.0,
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Text('Text'),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  height: 150.0, //Ganti Ukuran kotak
+                  width: 300.0,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image.asset(
+                    'assets/asset2.jpg',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Container(
                   margin: const EdgeInsets.all(10.0),
-                  height: 150.0,
-                  width: 200.0,
+                  height: 150.0, //Ganti Ukuran kotak
+                  width: 300.0,
                   decoration: BoxDecoration(color: Colors.amber),
-                  child: Text('Text'),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(10.0),
-                  height: 150.0,
-                  width: 200.0,
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Text('Text'),
+                  child: Image.asset(
+                    'assets/asset3.jpg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ],
             ),
+          ),
+
+// Bagian Slide
+          Center(
+            child: Text(
+              'Harga Tiket',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Text(
+            'Harga Tiket Local',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+
+          TextButton(
+            style: TextButton.styleFrom(
+              primary: Colors.red,
+            ),
+            onPressed: () {},
+            child: Text('Rp.-200.000 (tiket)'),
+          ),
+
+          TextButton(
+            style: TextButton.styleFrom(
+              primary: Colors.red,
+            ),
+            onPressed: () {},
+            child: Text('Rp.-220.000 (tiket)'),
+          ),
+
+          TextButton(
+            style: TextButton.styleFrom(
+              primary: Colors.red,
+            ),
+            onPressed: () {},
+            child: Text('Rp.-220.000 (tiket)'),
           ),
         ],
       ),
